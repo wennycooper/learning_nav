@@ -18,8 +18,8 @@ int main(int argc, char** argv) {
 
 	// velocity
 	double vx = 0.4; //0.4
-	double vy = 0.4; //0.0
-	double vth = 0.0; //0.4
+	double vy = 0.0; //0.0
+	double vth = 0.4; //0.4
 
 	ros::Time current_time;
 	ros::Time last_time;
