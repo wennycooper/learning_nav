@@ -4,6 +4,10 @@
 * The goal is to build a robot in gazebo which be able to move to a specified goal autonomously. 
 
 # Installation 
+* Follow this document
+
+        http://web.engr.oregonstate.edu/~chungje/Code/Pioneer3dx%20simulation/ros-indigo-gazebo2-pioneer.pdf
+
 * git clone this project into your catkin_ws/src
 * cd to catkin_ws
 * catkin_make
