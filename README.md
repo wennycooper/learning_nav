@@ -1,7 +1,7 @@
 # learning_nav
 
 * This is a project to learn ROS navigation stack.
-* The goal is build an robot in gazebo to be able to move to a specified goal autonomously. 
+* The goal is to build a robot in gazebo which be able to move to a specified goal autonomously. 
 
 # Installation 
 * git clone this project into your catkin_ws/src
