@@ -26,7 +26,7 @@ Open 5 terminals to run following commands in-sequencial
 
 * run tf_broadcaster for odom->base_footprint
 
-        rosrun learning_nav tf_broadster
+        rosrun learning_nav tf_broadcaster
 
 * run slam
 
