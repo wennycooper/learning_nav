@@ -36,7 +36,8 @@ Open 5 terminals to run following commands in-sequencial
 
         roslaunch learning_nav display.launch   
 
-# Bugs
+# TODOs
 
-* Sent a Goal but didn't see any message on /cmd_vel topic
+* base_controller to process /cmd_vel topic
+* odom_publisher to report odometry info 
 
