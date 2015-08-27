@@ -109,11 +109,21 @@ include_directories(
 add_executable(odometry src/odometry.cpp)
 target_link_libraries(odometry ${catkin_LIBRARIES})
 
+add_executable(laser_publisher src/laser_publisher.cpp)
+target_link_libraries(laser_publisher ${catkin_LIBRARIES})
+
+add_executable(tf_broadcaster_odom_footprint src/tf_broadcaster_odom_footprint.cpp)
+target_link_libraries(tf_broadcaster_odom_footprint ${catkin_LIBRARIES})
+
+
 add_executable(tf_broadcaster src/tf_broadcaster.cpp)
 target_link_libraries(tf_broadcaster ${catkin_LIBRARIES})
 
 add_executable(odom_publisher src/odom_publisher.cpp)
 target_link_libraries(odom_publisher ${catkin_LIBRARIES})
+
+add_executable(tf_broadcaster_footprint_chassis src/tf_broadcaster_footprint_chassis.cpp)
+target_link_libraries(tf_broadcaster_footprint_chassis ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
