@@ -109,6 +109,9 @@ include_directories(
 add_executable(odometry src/odometry.cpp)
 target_link_libraries(odometry ${catkin_LIBRARIES})
 
+add_executable(base_controller src/base_controller.cpp)
+target_link_libraries(base_controller ${catkin_LIBRARIES})
+
 add_executable(laser_publisher src/laser_publisher.cpp)
 target_link_libraries(laser_publisher ${catkin_LIBRARIES})
 
