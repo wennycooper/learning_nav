@@ -1,7 +1,9 @@
 # learning_nav
 
 * This is a project to learn ROS navigation stack.
-* The goal is to build a robot in gazebo which be able to move to a specified goal autonomously. 
+* The goal is to build a robot in rviz which be able to move to a specified goal autonomously.
+* without gazebo
+* with a static blank_map.pgm
 
 # Installation 
 * Follow this document
@@ -14,30 +16,26 @@
 
 # Execution
 
-Open 5 terminals to run following commands in-sequencial
+Open 3 terminals to run following commands in-sequencial
 
-* launch gazebo with robot and map
+* launch map-server with a blank_map, run a static tf transform of map->odom and launch move_base
 
-        roslaunch learning_nav gazebo.launch
+        roslaunch learning_nav fake_move_base_blank_map.launch
 
-* launch navigation move_base node
 
-        roslaunch learning_nav move_base.launch
-
-* run tf_broadcaster for odom->base_footprint
-
-        rosrun learning_nav tf_broadcaster
-
-* run slam
-
-        rosrun gmapping slam_gmapping scan:=/pioneer/laser/scan
 
 * launch rviz
 
         roslaunch learning_nav display.launch   
 
+* launch our base_controller (it will also publish /odom and broadcast /odom->/base_footprint)
+
+        rosrun learning_nav base_controller
+        
 # TODOs
 
-* base_controller to process /cmd_vel topic
-* odom_publisher to report odometry info 
+* map with obstacles
+* slam with localization
+* 
+
 
