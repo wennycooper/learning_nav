@@ -109,6 +109,12 @@ include_directories(
 add_executable(odometry src/odometry.cpp)
 target_link_libraries(odometry ${catkin_LIBRARIES})
 
+#add_executable(rotating_laser src/rotating_laser.cpp)
+#target_link_libraries(rotating_laser ${catkin_LIBRARIES})
+
+add_executable(sleep_seconds src/sleep_seconds.cpp)
+target_link_libraries(sleep_seconds ${catkin_LIBRARIES})
+
 add_executable(mybot_odometry src/mybot_odometry.cpp)
 target_link_libraries(mybot_odometry ${catkin_LIBRARIES})
 

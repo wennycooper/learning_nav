@@ -1,6 +1,6 @@
 <launch>
   <!-- Run the map server with a blank map -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find rbx1_nav)/maps/blank_map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find learning_nav)/maps/blank_map.yaml"/>
     
   <include file="$(find learning_nav)/launch/fake_move_base.launch" />
 
