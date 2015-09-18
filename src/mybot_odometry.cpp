@@ -24,7 +24,7 @@ void feedback_wheel_angularVelCallback(const geometry_msgs::Vector3 &vector3)
   omega_left = vector3.x;
   omega_right  = vector3.y;
 
-  printf("[KKUEI] Omega_left=%f, Omega_right=%f\n", omega_left, omega_right);
+  //printf("[KKUEI] Omega_left=%f, Omega_right=%f\n", omega_left, omega_right);
 
   current_time = ros::Time::now();
 
@@ -33,7 +33,7 @@ void feedback_wheel_angularVelCallback(const geometry_msgs::Vector3 &vector3)
   vel_x = wheelRadius * (omega_right + omega_left) / 2;
   omega_z = wheelRadius * (omega_right - omega_left) / wheelSeparation;
 
-  printf("[KKUEI] vel_x=%f, omega_z=%f\n", vel_x, omega_z);
+  //printf("[KKUEI] vel_x=%f, omega_z=%f\n", vel_x, omega_z);
 
   current_time = ros::Time::now(); 
   double dt = (current_time - last_time).toSec();

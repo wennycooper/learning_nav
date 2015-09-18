@@ -106,14 +106,14 @@ include_directories(
 ## Declare a cpp executable
 # add_executable(learning_nav_node src/learning_nav_node.cpp)
 
-add_executable(odometry src/odometry.cpp)
-target_link_libraries(odometry ${catkin_LIBRARIES})
+#add_executable(odometry src/odometry.cpp)
+#target_link_libraries(odometry ${catkin_LIBRARIES})
 
 #add_executable(rotating_laser src/rotating_laser.cpp)
 #target_link_libraries(rotating_laser ${catkin_LIBRARIES})
 
-add_executable(sleep_seconds src/sleep_seconds.cpp)
-target_link_libraries(sleep_seconds ${catkin_LIBRARIES})
+#add_executable(sleep_seconds src/sleep_seconds.cpp)
+#target_link_libraries(sleep_seconds ${catkin_LIBRARIES})
 
 add_executable(mybot_odometry src/mybot_odometry.cpp)
 target_link_libraries(mybot_odometry ${catkin_LIBRARIES})
@@ -124,24 +124,24 @@ target_link_libraries(mybot_base_controller ${catkin_LIBRARIES})
 add_executable(mybot_loop src/mybot_loop.cpp)
 target_link_libraries(mybot_loop ${catkin_LIBRARIES})
 
-add_executable(base_controller src/base_controller.cpp)
-target_link_libraries(base_controller ${catkin_LIBRARIES})
+#add_executable(base_controller src/base_controller.cpp)
+#target_link_libraries(base_controller ${catkin_LIBRARIES})
 
-add_executable(laser_publisher src/laser_publisher.cpp)
-target_link_libraries(laser_publisher ${catkin_LIBRARIES})
+#add_executable(laser_publisher src/laser_publisher.cpp)
+#target_link_libraries(laser_publisher ${catkin_LIBRARIES})
 
-add_executable(tf_broadcaster_odom_footprint src/tf_broadcaster_odom_footprint.cpp)
-target_link_libraries(tf_broadcaster_odom_footprint ${catkin_LIBRARIES})
+#add_executable(tf_broadcaster_odom_footprint src/tf_broadcaster_odom_footprint.cpp)
+#target_link_libraries(tf_broadcaster_odom_footprint ${catkin_LIBRARIES})
 
 
-add_executable(tf_broadcaster src/tf_broadcaster.cpp)
-target_link_libraries(tf_broadcaster ${catkin_LIBRARIES})
+#add_executable(tf_broadcaster src/tf_broadcaster.cpp)
+#target_link_libraries(tf_broadcaster ${catkin_LIBRARIES})
 
-add_executable(odom_publisher src/odom_publisher.cpp)
-target_link_libraries(odom_publisher ${catkin_LIBRARIES})
+#add_executable(odom_publisher src/odom_publisher.cpp)
+#target_link_libraries(odom_publisher ${catkin_LIBRARIES})
 
-add_executable(tf_broadcaster_footprint_chassis src/tf_broadcaster_footprint_chassis.cpp)
-target_link_libraries(tf_broadcaster_footprint_chassis ${catkin_LIBRARIES})
+#add_executable(tf_broadcaster_footprint_chassis src/tf_broadcaster_footprint_chassis.cpp)
+#target_link_libraries(tf_broadcaster_footprint_chassis ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes

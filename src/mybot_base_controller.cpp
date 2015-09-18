@@ -35,7 +35,7 @@ void cmd_velCallback(const geometry_msgs::Twist &twist_aux)
 }
 
 int main(int argc, char** argv){
-  ros::init(argc, argv, "base_controller");
+  ros::init(argc, argv, "mybot_base_controller");
   ros::NodeHandle n1, n2;
   cmd_vel_sub = n1.subscribe("cmd_vel", 10, cmd_velCallback);
   cmd_wheel_angularVel_pub = n2.advertise<geometry_msgs::Vector3>("cmd_wheel_angularVel", 50);
