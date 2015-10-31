@@ -1,0 +1,21 @@
+<launch>
+ 
+	<arg name="model" default="$(find learning_nav)/urdf/Adv_Robotics_Car.xacro" />
+	<arg name="gui" default="false" />
+	<param name="robot_description" textfile="$(arg model)" />
+	<param name="use_gui" value="$(arg gui)"/>	
+
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node>
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+          <param name="publish_frequency" value="20"/>
+        </node>
+  
+ 	<!-- Run the map server with obstacles map -->
+  	<include file="$(find learning_nav)/launch/fake_move_base_map_with_obstacles.launch" />
+
+  	<node pkg="learning_nav" name="mybot_base_controller" type="mybot_base_controller" />
+  
+  	<node pkg="learning_nav" name="mybot_loop" type="mybot_loop" /> 
+  
+  	<node pkg="learning_nav" name="mybot_odometry" type="mybot_odometry" /> 
+</launch>

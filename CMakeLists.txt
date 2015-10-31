@@ -115,6 +115,9 @@ include_directories(
 #add_executable(sleep_seconds src/sleep_seconds.cpp)
 #target_link_libraries(sleep_seconds ${catkin_LIBRARIES})
 
+add_executable(testLaser src/testLaser.cpp)
+target_link_libraries(testLaser ${catkin_LIBRARIES})
+
 add_executable(mybot_odometry src/mybot_odometry.cpp)
 target_link_libraries(mybot_odometry ${catkin_LIBRARIES})
 
@@ -124,11 +127,14 @@ target_link_libraries(mybot_base_controller ${catkin_LIBRARIES})
 add_executable(mybot_loop src/mybot_loop.cpp)
 target_link_libraries(mybot_loop ${catkin_LIBRARIES})
 
+add_executable(mybot_laser_filter src/mybot_laser_filter.cpp)
+target_link_libraries(mybot_laser_filter ${catkin_LIBRARIES})
+
 #add_executable(base_controller src/base_controller.cpp)
 #target_link_libraries(base_controller ${catkin_LIBRARIES})
 
-#add_executable(laser_publisher src/laser_publisher.cpp)
-#target_link_libraries(laser_publisher ${catkin_LIBRARIES})
+add_executable(laser_publisher src/laser_publisher.cpp)
+target_link_libraries(laser_publisher ${catkin_LIBRARIES})
 
 #add_executable(tf_broadcaster_odom_footprint src/tf_broadcaster_odom_footprint.cpp)
 #target_link_libraries(tf_broadcaster_odom_footprint ${catkin_LIBRARIES})

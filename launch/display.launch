@@ -7,8 +7,8 @@
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
           <param name="publish_frequency" value="10"/>
         </node>
-<!--
+
 	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find learning_nav)/launch/pioneer.rviz" />
--->
+
 
 </launch>

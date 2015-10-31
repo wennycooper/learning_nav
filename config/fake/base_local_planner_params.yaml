@@ -1,10 +1,10 @@
-controller_frequency: 2.5
+controller_frequency: 3.0
 recovery_behavior_enabled: false
 clearing_rotation_allowed: false
 
 TrajectoryPlannerROS:
    max_vel_x: 0.3
-   min_vel_x: 0.1
+   min_vel_x: 0.0
    max_vel_y: 0.0  # zero for a differential drive robot
    min_vel_y: 0.0
    max_vel_theta: 0.5
@@ -16,8 +16,8 @@ TrajectoryPlannerROS:
    acc_lim_theta: 1.2
 
    holonomic_robot: false
-   yaw_goal_tolerance: 0.2 # about 6 degrees
-   xy_goal_tolerance: 0.1  # 5 cm
+   yaw_goal_tolerance: 0.2 # about 11.46 degrees
+   xy_goal_tolerance: 0.01  # 1 cm
    latch_xy_goal_tolerance: false
    pdist_scale: 0.8
    gdist_scale: 0.4
