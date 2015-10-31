@@ -1,41 +1,49 @@
 # learning_nav
 
 * This is a project to learn ROS navigation stack.
-* The goal is to build a robot in rviz which be able to move to a specified goal autonomously.
-* without gazebo
-* with a static blank_map.pgm
+* The goal is to build a robot with URDF, running it in gazebo with laser range sensor, and is cabable to move to a specified goal autonomously.
+
 
 # Installation 
-* Follow this document
-
-        http://web.engr.oregonstate.edu/~chungje/Code/Pioneer3dx%20simulation/ros-indigo-gazebo2-pioneer.pdf
-
 * git clone this project into your catkin_ws/src
 * cd to catkin_ws
 * catkin_make
 
 # Execution
 
-Open 3 terminals to run following commands in-sequencial
+Open terminals to run following commands in-sequencial
 
-* launch map-server with a blank_map, run a static tf transform of map->odom and launch move_base
+* launch gazebo and spawn a robot
 
-        roslaunch learning_nav fake_move_base_blank_map.launch
+        # roslaunch learning_nav gazebo.launch
 
+* run slam_gmapping
+        # rosrun gmapping slam_gmapping scan:=/pioneer/laser/scan
 
+* launch rviz, joint_state_publisher and robot_state_publisher 
 
-* launch rviz
+        # roslaunch learning_nav display.launch   
 
-        roslaunch learning_nav display.launch   
+* run my_base_controller to serve /cmd_vel
 
-* launch our base_controller (it will also publish /odom and broadcast /odom->/base_footprint)
+        $ rosrun learning_nav mybot_base_controller
 
-        rosrun learning_nav base_controller
+* run my_loop
+ 
+        $ rosrun learning_nav mybot_loop
+
+* run my_odometry
+
+        $ rosrun learning_nav mybot_odometry
+
+* run move_base to serve move-to-a-goal
+
+        $ roslaunch learning_nav fake_move_base.launch
+
         
-# TODOs
+        
+# BUGS
 
-* map with obstacles
-* slam with localization
-* 
+* Currently, there is problem in move-to-a-goal. It looks like localization causes problems 
 
 
