@@ -1,7 +1,7 @@
 # learning_nav
 
 * This is a project to learn ROS navigation stack.
-* The goal is to build a robot with URDF, running it in gazebo with laser range sensor, and is cabable to move to a specified goal autonomously.
+* The goal is to build a robot with URDF, running it in gazebo with laser range sensor, and be able to move to a specified goal autonomously.
 
 
 # Installation 
@@ -18,6 +18,7 @@ Open terminals to run following commands in-sequencial
         # roslaunch learning_nav gazebo.launch
 
 * run slam_gmapping
+
         # rosrun gmapping slam_gmapping scan:=/pioneer/laser/scan
 
 * launch rviz, joint_state_publisher and robot_state_publisher 
