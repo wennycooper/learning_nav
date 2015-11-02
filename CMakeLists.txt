@@ -127,8 +127,12 @@ target_link_libraries(mybot_base_controller ${catkin_LIBRARIES})
 add_executable(mybot_loop src/mybot_loop.cpp)
 target_link_libraries(mybot_loop ${catkin_LIBRARIES})
 
-add_executable(mybot_laser_filter src/mybot_laser_filter.cpp)
-target_link_libraries(mybot_laser_filter ${catkin_LIBRARIES})
+add_executable(mybot_laser_angular_bound_filter src/mybot_laser_angular_bound_filter.cpp)
+target_link_libraries(mybot_laser_angular_bound_filter ${catkin_LIBRARIES})
+
+add_executable(mybot_laser_obstacle_clearing_filter src/mybot_laser_obstacle_clearing_filter.cpp)
+target_link_libraries(mybot_laser_obstacle_clearing_filter ${catkin_LIBRARIES})
+
 
 #add_executable(base_controller src/base_controller.cpp)
 #target_link_libraries(base_controller ${catkin_LIBRARIES})
